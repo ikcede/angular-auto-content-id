@@ -18,9 +18,6 @@ jobs:
           node-version: "20.x"
           registry-url: https://registry.npmjs.org/
 
-      - run: npm install
-      - run: npm run test
-
       # Go to the correct package directory
       - run: cd package/angular-auto-content-id
 
