@@ -22,4 +22,4 @@ jobs:
       - id: build-publish
         uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
         with:
-          path: dist/demo
+          path: dist/demo/browser
