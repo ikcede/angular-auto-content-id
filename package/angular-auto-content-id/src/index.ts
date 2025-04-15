@@ -1,0 +1,1 @@
+export * from './autoContentId.directive';
