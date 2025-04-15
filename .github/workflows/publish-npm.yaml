@@ -19,6 +19,9 @@ jobs:
           node-version: "20.x"
           registry-url: https://registry.npmjs.org/
 
+      # Set up ng-packagr
+      - run: npm install
+
       - name: Publish to NPM
         run: npm run publish
         env:
