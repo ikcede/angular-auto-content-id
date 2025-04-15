@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/temp",
+            "outputPath": "dist/demo",
             "index": "demo/src/index.html",
             "browser": "demo/src/main.ts",
             "polyfills": ["zone.js"],
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "temp:build:production"
+              "buildTarget": "demo:build:production"
             },
             "development": {
-              "buildTarget": "temp:build:development"
+              "buildTarget": "demo:build:development"
             }
           },
           "defaultConfiguration": "development"

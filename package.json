@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "start": "npm run build:package && ng serve",
+    "build": "npm run build:package && ng build",
+    "watch": "npm run build:package && ng build --watch --configuration development",
+    "test": "ng test package",
+    "test:demo": "ng test demo",
     "build:package": "ng-packagr -p package/angular-auto-content-id/ng-package.json",
     "publish": "npm run build:package && npm publish dist/angular-auto-content-id"
   },

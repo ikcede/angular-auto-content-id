@@ -1,30 +1,71 @@
-# Temp
+# Angular Auto Id Directive
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A directive for quickly generating ids for headings based on text content.
+This makes it easier to link to content by hash:
+
+```html
+<!-- Initial heading -->
+<h1>Sample Heading!</h1>
+
+<!-- After using [autoContentId] -->
+<h1 id="sample-heading">Sample Heading!</h1>
+```
+
+Then, you can navigate to `/page#sample-heading`.
+
+## Installation
+
+```sh
+npm install angular-auto-content-id --save
+```
+
+## Usage
+
+First add `AutoContentIdDirective` to your component:
+
+```ts
+@Component({
+  imports: [AutoContentIdDirective],
+})
+export class Component {}
+```
+
+Then, include it as an attribute on any element and it will generate
+ids for that element's children.
+
+```html
+<article autoContentId>
+  <h1>Angular Auto Content Id</h1>
+  <h2>Demo</h2>
+</article>
+```
+
+# Development
+
+## Testing
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+# Testing for angular-auto-content-id package:
+ng test package
+
+# Testing for demo:
+ng test demo
+```
 
 ## Development server
 
 To start a local development server, run:
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This will automatically compile the package and link it to demo before serving demo.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files, but you will need to
+restart the server if you make changes to the package code.
 
 ## Building
 
@@ -35,25 +76,3 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
