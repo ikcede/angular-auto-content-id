@@ -19,10 +19,8 @@ jobs:
           node-version: "20.x"
           registry-url: https://registry.npmjs.org/
 
-      # Go to the correct package directory
-      - run: cd package/angular-auto-content-id
-
       - name: Publish to NPM
-        run: npm publish --access public
+        # Go to the correct package directory and publish
+        run: cd package/angular-auto-content-id && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
