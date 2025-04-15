@@ -1,7 +1,7 @@
 {
   "name": "angular-auto-content-id",
   "description": "Angular directive library that automatically sets ids on elements based on their text content.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "ikcede <https://github.com/ikcede>",
   "repository": {
     "type": "git",
