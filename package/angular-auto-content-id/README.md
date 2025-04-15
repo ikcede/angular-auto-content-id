@@ -39,3 +39,22 @@ ids for that element's children.
   <h2>Demo</h2>
 </article>
 ```
+
+## Options
+
+You can set options by using the `autoContentIdOptions` input:
+
+```html
+<article autoContentId [autoContentIdOptions]="options">
+  <h1>Angular Auto Content Id</h1>
+  <h2>Demo</h2>
+</article>
+```
+
+### Supported Options
+
+| Option                | Type                               | Default                                | Description                                                                   |
+| --------------------- | ---------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
+| `tags`                | `string[]`                         | `['h1', 'h2', 'h3', 'h4', 'h5', 'h6']` | The tags to apply the directive to.                                           |
+| `customTextIdFn`      | `(text: string) => string`         | `undefined`                            | A function that can be used to customize the id generation from text content. |
+| `customIdGeneratorFn` | `(element: HTMLElement) => string` | `undefined`                            | A function that can be used to customize the id generation a given element.   |
