@@ -1,6 +1,6 @@
 {
   "name": "angular-auto-content-id",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "npm run build:package && ng serve",
@@ -9,7 +9,7 @@
     "test": "ng test package",
     "test:demo": "ng test demo",
     "build:package": "ng-packagr -p package/angular-auto-content-id/ng-package.json",
-    "publish": "cd package/angular-auto-content-id && npm publish && cd ../../"
+    "publish": "npm run build:package && npm publish --access public ./dist/angular-auto-content-id"
   },
   "private": true,
   "dependencies": {
