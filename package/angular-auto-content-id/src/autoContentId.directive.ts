@@ -26,8 +26,9 @@ export class AutoContentIdDirective implements OnInit {
       if (!currentId) {
         const text = element.textContent;
         if (text) {
-          const id = text.toLowerCase().replace(/[^a-z0-9]/g, '-');
-          element.setAttribute('id', id);
+          const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const cleanId = id.replace(/^\-|\-$/g, '');
+          element.setAttribute('id', cleanId);
         }
       }
     });

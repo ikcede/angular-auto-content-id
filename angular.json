@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "temp": {
+    "demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -84,6 +84,23 @@
               }
             ],
             "styles": ["demo/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "package": {
+      "projectType": "library",
+      "root": "package/angular-auto-content-id",
+      "sourceRoot": "package/angular-auto-content-id/src",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [],
             "scripts": []
           }
         }
