@@ -16,8 +16,10 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: dist/demo
+      url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - id: build-publish
         uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
+        with:
+          path: dist/demo
