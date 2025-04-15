@@ -1,0 +1,30 @@
+name: Publish on NPM
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # This adds authentication for the NPM registry
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          registry-url: https://registry.npmjs.org/
+
+      - run: npm install
+      - run: npm run test
+
+      # Go to the correct package directory
+      - run: cd package/angular-auto-content-id
+
+      - name: Publish to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

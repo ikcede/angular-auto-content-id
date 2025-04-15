@@ -5,7 +5,7 @@
   "author": "ikcede <https://github.com/ikcede>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ikcede/angular-auto-content-id"
+    "url": "git+https://github.com/ikcede/angular-auto-content-id.git"
   },
   "license": "MIT",
   "keywords": [
