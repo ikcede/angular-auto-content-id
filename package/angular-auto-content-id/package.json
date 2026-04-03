@@ -1,7 +1,7 @@
 {
   "name": "angular-auto-content-id",
   "description": "Angular directive library that automatically sets ids on elements based on their text content.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "ikcede <https://github.com/ikcede>",
   "repository": {
     "type": "git",
@@ -11,6 +11,8 @@
   "keywords": [
     "angular",
     "angular 19",
+    "angular 20",
+    "angular 21",
     "directive",
     "auto",
     "id",
@@ -23,8 +25,8 @@
   },
   "homepage": "https://github.com/ikcede/angular-auto-content-id",
   "peerDependencies": {
-    "@angular/common": ">=19.0.0 <20.0.0",
-    "@angular/core": ">=19.0.0 <20.0.0"
+    "@angular/common": ">=19.0.0 <22.0.0",
+    "@angular/core": ">=19.0.0 <22.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
