@@ -13,6 +13,7 @@
     "angular 19",
     "angular 20",
     "angular 21",
+    "angular 22",
     "directive",
     "auto",
     "id",
@@ -25,10 +26,10 @@
   },
   "homepage": "https://github.com/ikcede/angular-auto-content-id",
   "peerDependencies": {
-    "@angular/common": ">=19.0.0 <22.0.0",
-    "@angular/core": ">=19.0.0 <22.0.0"
+    "@angular/common": ">=19.0.0 <23.0.0",
+    "@angular/core": ">=19.0.0 <23.0.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.8.1"
   }
 }
